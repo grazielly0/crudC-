@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Cadastro = new System.Windows.Forms.Button();
+            this.Atualiza = new System.Windows.Forms.Button();
             this.Voltar = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -39,18 +39,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Cadastro
+            // Atualiza
             // 
-            this.Cadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Cadastro.Location = new System.Drawing.Point(298, 392);
-            this.Cadastro.Name = "Cadastro";
-            this.Cadastro.Size = new System.Drawing.Size(93, 23);
-            this.Cadastro.TabIndex = 33;
-            this.Cadastro.Text = "Consultar";
-            this.Cadastro.UseVisualStyleBackColor = false;
-            this.Cadastro.Click += new System.EventHandler(this.Cadastro_Click);
+            this.Atualiza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Atualiza.Location = new System.Drawing.Point(298, 392);
+            this.Atualiza.Name = "Atualiza";
+            this.Atualiza.Size = new System.Drawing.Size(93, 23);
+            this.Atualiza.TabIndex = 33;
+            this.Atualiza.Text = "Atualiza";
+            this.Atualiza.UseVisualStyleBackColor = false;
+            this.Atualiza.Click += new System.EventHandler(this.Cadastro_Click);
             // 
             // Voltar
             // 
@@ -99,7 +100,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(328, 157);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 29);
+            this.textBox1.Size = new System.Drawing.Size(182, 29);
             this.textBox1.TabIndex = 28;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -160,13 +161,25 @@
             this.label1.Text = "Atualizar";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button1.Location = new System.Drawing.Point(516, 157);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 29);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Atualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Cadastro);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Atualiza);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -187,7 +200,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Cadastro;
+        private System.Windows.Forms.Button Atualiza;
         private System.Windows.Forms.Button Voltar;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
@@ -198,5 +211,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

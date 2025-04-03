@@ -12,9 +12,12 @@ namespace frontcshap
 {
     public partial class Excluir : Form
     {
+        DAO exc;
         public Excluir()
         {
+           
             InitializeComponent();
+            exc = new DAO();
         }
 
         private void Excluir_Load(object sender, EventArgs e)
@@ -34,6 +37,9 @@ namespace frontcshap
 
         private void Exclui_Click(object sender, EventArgs e)
         {
+            int codigo = Convert.ToInt32(textBox1.Text);
+            MessageBox.Show(exc.Excluir(codigo));
+            this.Close();
 
         }//fim do button excluir
     }

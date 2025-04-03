@@ -12,9 +12,18 @@ namespace frontcshap
 {
     public partial class Atualizar : Form
     {
+        DAO atu;
         public Atualizar()
         {
+            atu = new DAO();    
             InitializeComponent();
+            textBox1.ReadOnly= false;
+            textBox2.ReadOnly= true;
+            textBox3.ReadOnly = true;
+            textBox4.ReadOnly = true;
+          
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -50,12 +59,47 @@ namespace frontcshap
 
         private void Cadastro_Click(object sender, EventArgs e)
         {
+            int codigo = Convert.ToInt32(textBox1.Text);
+            string nome = textBox2.Text;
+            string telefone = textBox3.Text;
+            string endereco = textBox4.Text;
 
+
+           
+            atu.Atualizar(codigo, "nome", nome);
+            atu.Atualizar(codigo, "telefone", telefone);
+            atu.Atualizar(codigo, "endereco", endereco);
+            MessageBox.Show("Dados atualizados com sucesso!");
+            this.Close();
         }//fim do button atualizar
 
         private void Voltar_Click(object sender, EventArgs e)
         {
             this.Close();
         }//fim do button voltar
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (textBox1.Text == "")
+            {
+                textBox2.Text = "Preencha os campos!";
+                textBox3.Text = "Preencha os campos!";
+                textBox4.Text = "Preencha os campos!";
+            }
+            else
+            {
+                int codigo = Convert.ToInt32(textBox1.Text);
+                textBox2.Text = atu.RetornarNome(codigo);
+                textBox3.Text = atu.RetornarTelefone(codigo);
+                textBox4.Text = atu.RetornarEndereco(codigo);
+                textBox1.ReadOnly = true;
+
+                textBox1.ReadOnly = true;
+                textBox2.ReadOnly = false;
+                textBox3.ReadOnly = false;
+                textBox4.ReadOnly = false;
+            }
+        }//fim do buscar
     }
 }
